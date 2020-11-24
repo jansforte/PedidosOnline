@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-11-2020 a las 02:56:34
+-- Tiempo de generación: 24-11-2020 a las 16:29:39
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.2.30
 
@@ -43,8 +43,7 @@ CREATE TABLE `detallepedido` (
 
 INSERT INTO `detallepedido` (`ID`, `IDPedido`, `IDProducto`, `Precio`, `Cantidad`) VALUES
 (4, 1, 2, 800, 1),
-(5, 2, 2, 800, 1),
-(6, 2, 1, 1000, 1);
+(12, 7, 1, 1000, 1);
 
 -- --------------------------------------------------------
 
@@ -71,7 +70,7 @@ CREATE TABLE `pedido` (
 
 INSERT INTO `pedido` (`ID`, `Pedido`, `Nombre`, `Telefono`, `Direccion`, `Barrio`, `Ciudad`, `Fecha`, `Total`, `Status`) VALUES
 (1, 'q33iea4mp59irb9qfvehblhfbo', 'jeison', 2147483647, 'calle 5 n 23a-36', 'alameda', 'tulua', '2020-11-23 19:46:48', 800, 'Pendiente'),
-(2, 'q33iea4mp59irb9qfvehblhfbo', 'Johan', 2147483647, 'calle 5 n 23a-36', 'alameda', 'London', '2020-11-23 19:48:37', 1800, 'Pendiente');
+(7, '7a57rgpac8louvhjnsh51uin2e', 'Johan', 321499999, 'calle 5 n 23a-36', 'alameda', 'tulua', '2020-11-24 00:30:51', 1000, 'Enviado');
 
 -- --------------------------------------------------------
 
@@ -94,7 +93,8 @@ CREATE TABLE `producto` (
 INSERT INTO `producto` (`ID`, `Nombre`, `Precio`, `Descripcion`, `Imagen`) VALUES
 (1, 'empanadas', 1000, 'empanadas de posho con carne', 'https://www.colture.co/wp-content/uploads/2018/10/colombian-gastronomy.jpg'),
 (2, 'cafe', 800, 'rico cafe con leche', 'https://tse3.mm.bing.net/th?id=OIP.cPUJ0Ah4UPN2zupCxbMdLQHaHa&pid=Api'),
-(3, 'Buñuelos', 500, 'Buñuelo de queso', 'https://1.bp.blogspot.com/-IzO4SOECG0I/U_tTlOJOjII/AAAAAAAAAIs/EYjrJXJiZ-o/s1600/IMG_2858%2Bcopy.jpg');
+(3, 'Buñuelos', 500, 'Buñuelo de queso', 'https://1.bp.blogspot.com/-IzO4SOECG0I/U_tTlOJOjII/AAAAAAAAAIs/EYjrJXJiZ-o/s1600/IMG_2858%2Bcopy.jpg'),
+(5, 'Avena', 500, 'Avena jugosa', 'https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2018/07/leche-de-avena-casera-rapida.jpg');
 
 -- --------------------------------------------------------
 
@@ -107,6 +107,13 @@ CREATE TABLE `usuarios` (
   `Usuario` varchar(45) DEFAULT NULL,
   `Password` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`UsuarioId`, `Usuario`, `Password`) VALUES
+(1, 'admin', '123');
 
 --
 -- Índices para tablas volcadas
@@ -146,25 +153,25 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `detallepedido`
 --
 ALTER TABLE `detallepedido`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `UsuarioId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `UsuarioId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restricciones para tablas volcadas
