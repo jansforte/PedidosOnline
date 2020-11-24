@@ -1,0 +1,36 @@
+
+.contenedor{
+	width:max-width;
+	high:max-height;
+}
+
+.div1{
+	width:100%;
+	position:relative;
+}
+.img-1{
+	width:100%;
+}
+.menu{
+	border-bottom: 4px solid orange;
+}
+.contenido{
+	width:80%;
+	margin-top:2%;
+	margin-bottom:2%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.footer{
+	background-color:#343a40;
+	border-top: 4px solid orange;
+    padding-top: 15px;
+    padding-right: 8px;
+    margin: 0;
+    text-align: right;
+    color: white;
+	
+}
+	
+
+
